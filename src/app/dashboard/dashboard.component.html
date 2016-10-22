@@ -1,0 +1,14 @@
+<md-card>
+  <md-card-title>Usage statistics for station #xx</md-card-title>
+  <div *ngIf="lineChartData.length > 0">
+    <div class="col-md-6">
+
+      <canvas baseChart
+              [data]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType"></canvas>
+    </div>
+  </div>
+</md-card>

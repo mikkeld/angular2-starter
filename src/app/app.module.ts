@@ -9,24 +9,28 @@ import { AngularFireModule } from 'angularfire2';
 import { AppComponent } from './app.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyA-Grss9k2dfwX9SS_nsKRgNlDOxu7NFxU",
-  authDomain: "explorer-app-12f14.firebaseapp.com",
-  databaseURL: "https://explorer-app-12f14.firebaseio.com",
-  storageBucket: "explorer-app-12f14.appspot.com",
+  apiKey: "AIzaSyCqNxCAUowSWQvg_7ztQn3sqLefqApxRes",
+  authDomain: "ebshackathon.firebaseapp.com",
+  databaseURL: "https://ebshackathon.firebaseio.com",
+  storageBucket: "ebshackathon.appspot.com",
 };
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponentComponent
+    TestComponentComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     FormsModule,
     HttpModule,
+    ChartsModule,
     routing,
     MaterialModule.forRoot(),
     AgmCoreModule.forRoot({

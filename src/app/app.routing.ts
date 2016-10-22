@@ -1,15 +1,21 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders }  from '@angular/core';
 import {TestComponentComponent} from "./test-component/test-component.component";
+import {DashboardComponent} from "./dashboard/dashboard.component";
+
 
 const appRoutes: Routes = [
   {
-    path: 'test',
+    path: 'map',
     component: TestComponentComponent
   },
   {
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
     path: '',
-    redirectTo: '/test',
+    redirectTo: '/map',
     pathMatch: 'full'
   }
 ];
