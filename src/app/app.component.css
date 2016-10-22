@@ -6,3 +6,7 @@
 .secondary {
   color: rgba(0,0,0,0.54);
 }
+
+.md-toolbar {
+  font-side: 12px;
+}
