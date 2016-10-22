@@ -1,5 +1,9 @@
 <sebm-google-map [latitude]="lat" [longitude]="lng">
-  <sebm-google-map-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl"></sebm-google-map-marker>
+  <sebm-google-map-marker *ngFor="let car of illegalCars" [latitude]="car.lat" [longitude]="car.lon" [iconUrl]="car.icon">
+    <sebm-google-map-info-window>
+      <button md-button color="primary" (click)="gotoDetail(car.id)">STATISTICS</button>
+    </sebm-google-map-info-window>
+  </sebm-google-map-marker>
 </sebm-google-map>
 
 <md-card>

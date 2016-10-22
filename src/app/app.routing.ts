@@ -2,6 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders }  from '@angular/core';
 import {TestComponentComponent} from "./test-component/test-component.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
+import {StationComponent} from "./station/station.component";
 
 
 const appRoutes: Routes = [
@@ -12,6 +13,10 @@ const appRoutes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'dashboard/:id',
+    component: StationComponent
   },
   {
     path: '',
